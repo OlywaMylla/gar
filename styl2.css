@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(geralt.webp);
+    background-size: cover;
+}
+
+.ekran {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.styl1 {
+    background-color: gold;
+    color: hotpink;
+    font-weight: 200%;
+    font-size: 20px;
+    font-family: Arial;
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+}
+
+button:active {
+    width: 180px;
+    height: 40px;
+    background-color: black;
+}
+
+.styl2 {
+    background-color: red;
+    color: white;
+    font-weight: 200%;
+    font-size: 20px;
+    font-family: Arial;
+    border: 5px solid aqua;
+    border-radius: 20px;
+    width: 180px;
+    height: 40px;
+}
+
+.space {
+    width: 100px;
+    height: 100px;
+    background-color: palegreen;
+    border-radius: 20px;
+    border: 2px solid whitesmoke;
+    font-family: Arial;
+}
+
+b {
+    color: goldenrod;
+}
+
+.gar {
+    position: relative;
+    background-color: darkblue;
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try1</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <script>
+
+        function obojetna_nazwa() {
+
+            x = Math.random();
+            x = (x * 400) + 100;
+            x = Math.floor(x);
+
+            y = Math.random();
+            y = (y * 400) + 100;
+            y = Math.floor(y);
+
+            l = Math.random();
+            l = (l * 400) + 100;
+            l = Math.floor(l);
+
+            t = Math.random();
+            t = (t * 400) + 100;
+            t = Math.floor(t);
+
+            l2 = Math.random();
+            l2 = (l2 * x);
+            if (l2 <= 50) {
+                l2 = l2 + 50;
+            }
+            else if (l2>= x - 50) {
+                l2 = l2 - 100;
+            }
+            l2 = Math.floor(l2);
+
+            t2 = Math.random();
+            t2 = (t2 * y);
+            if (t2 <= 50) {
+                t2 = t2 + 60;
+            }
+            else if (t2>= y - 50) {
+                t2 = t2 - 100;
+            }
+            t2 = Math.floor(t2);
+
+            let button = document.getElementById("button1");
+            console.log('zmienna x = ', x);
+            console.log('zmienna y =', y);
+            button.setAttribute("class", "styl2");
+
+            let space = document.getElementById('space');
+            let gar = document.getElementById('gar');
+
+            space.style.width = x + "px";
+            space.style.height = y + "px";
+            space.style.marginLeft = l + "px";
+            space.style.marginTop = t + "px";
+            gar.style.marginLeft = l2 + "px";
+            gar.style.marginTop = t2 + "px";
+            
+        }
+
+        document.addEventListener('keydown', function(e) {
+            switch (e.keyCode) {
+                case 32:
+                    obojetna_nazwa()
+                break;
+            }
+        });
+
+        document.addEventListener('keyup', function(e) {
+            switch (e.keyCode) {
+                case 32:
+                    let button = document.getElementById("button1");
+                    button.setAttribute("class", "styl1");
+                break;
+            }
+        });
+    </script>
+    <section class="ekran">
+        <button class="styl1" onclick="obojetna_nazwa()" id="button1"><b>AKTYWUJ</b></button>
+        <div class="space" id="space">
+            <div class="gar" id="gar"><p>gh</p></div>
+        </div>
+    </section>
+</body>
+</html>
